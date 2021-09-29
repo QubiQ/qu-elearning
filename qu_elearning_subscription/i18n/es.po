@@ -1,0 +1,48 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* qu_elearning_subscription
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-29 09:18+0000\n"
+"PO-Revision-Date: 2021-09-29 11:19+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: qu_elearning_subscription
+#: model:ir.model.fields,field_description:qu_elearning_subscription.field_slide_channel_partner__blocked_access
+msgid "Blocked"
+msgstr "Bloqueado"
+
+#. module: qu_elearning_subscription
+#: model:ir.model,name:qu_elearning_subscription.model_slide_channel_partner
+msgid "Channel / Partners (Members)"
+msgstr "Canal / Partners (Miembros)"
+
+#. module: qu_elearning_subscription
+#: model_terms:ir.ui.view,arch_db:qu_elearning_subscription.slide_channel_partner_view_tree
+msgid "Lock Access"
+msgstr "Bloquear Accesso"
+
+#. module: qu_elearning_subscription
+#: model:ir.model,name:qu_elearning_subscription.model_slide_channel
+msgid "Slide Channel"
+msgstr "Curso"
+
+#. module: qu_elearning_subscription
+#: model:ir.model,name:qu_elearning_subscription.model_sale_subscription
+msgid "Subscription"
+msgstr "Suscripción"
+
+#. module: qu_elearning_subscription
+#: model_terms:ir.ui.view,arch_db:qu_elearning_subscription.slide_channel_partner_view_tree
+msgid "Unlock Access"
+msgstr "Desbloquear acceso"

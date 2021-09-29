@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Copyright 2021 Jesus Ramoneda <jesus.ramoneda@qubiq.es>
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<!-- TOWORK in the Future-->
+<odoo>
+    <template id="course_slides_list_slide"
+        inherit_id="website_slides.course_slides_list_slide">
+
+    </template>
+
+</odoo>
+
+
