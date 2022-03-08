@@ -12,7 +12,6 @@
                 <!-- Add your fields here -->
                 <field name="allow_group_ids" attrs="{'invisible': [('enroll', '=', 'public')]}" widget="many2many_tags" groups="base.group_no_one"/>
             </xpath>
-            
         </field>
     </record>
 </odoo>

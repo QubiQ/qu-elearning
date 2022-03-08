@@ -9,15 +9,12 @@
         <field name="inherit_id" ref="website_slides.slide_channel_partner_view_tree"/>
         <field name="arch" type="xml">
         <xpath expr="//tree" position="attributes">
-            
             <attribute name="decoration-muted">blocked_access == True</attribute>
-            
-            
         </xpath>
             <xpath expr="//button" position="before">
                 <field name="blocked_access" invisible="1"/>
-                <button name="toggle_block"  attrs="{'invisible': [('blocked_access', '=', True)]}"  icon="fa-lock" type="object"/>
-                <button name="toggle_block"  attrs="{'invisible': [('blocked_access', '=', False)]}" icon="fa-unlock" type="object"/>
+                <button name="toggle_block"  attrs="{'invisible': [('blocked_access', '=', True)]}" string="Lock Access" icon="fa-lock" type="object"/>
+                <button name="toggle_block"  attrs="{'invisible': [('blocked_access', '=', False)]}" string="Unlock Access" icon="fa-unlock" type="object"/>
             </xpath>
 
         </field>

@@ -6,7 +6,6 @@
 <odoo>
     <template id="course_slides_list_slide"
         inherit_id="website_slides.course_slides_list_slide">
-
     </template>
 
 </odoo>
