@@ -2,33 +2,22 @@
    :target: https://www.gnu.org/licenses/agpl
    :alt: License: AGPL-3
 
-=======================
-Elearning Subscriptions
-=======================
+============================
+Elearning Track Student Time
+============================
 
-This modules allows to manage access to course by subscriptions
-You can unlock/lock access to the currents attendances by click on Course -> Attendance -> lock button
-
-When a subscriptions is to renew it will automatically lock the access to the customer until the subscriptions is progress again
+This module track the time invested of the student in any course and add reports.
 
 ============
 Requeriments
 ============
 
-* Odoo Enterprise Edition
-* Install website_slides and sale_subscriptions
+* Install website_slides and qu_elearning
 
 Configuration
 =============
 
-To configure this module, you need to:
-
-#. Create a subscription template
-#. Create a product subscription
-#. Publish the product subscription on website
-#. Activate Ecommerce for Elearning
-#. Set the payment enroll method for a course and choice the subscription product
-...
+* Just clic on install
 
 
 Known issues / Roadmap
@@ -51,6 +40,7 @@ Credits
 Contributors
 ------------
 
+* Andrea Cattalini <andrea.cattalani@qubiq.es>
 * Jesús Ramoneda Marin <jesus.ramoneda@qubiq.es>
 
 

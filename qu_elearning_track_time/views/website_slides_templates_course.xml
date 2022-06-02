@@ -4,21 +4,19 @@
 
 <!-- TOWORK in the Future-->
 <odoo>
-    <template id="course_sidebar"
-        inherit_id="website_slides.course_sidebar">
+       <template id="slides_template_main_time"
+                 inherit_id="website_slides.slide_main">
+                <xpath expr="//div[@class='container o_wslides_lesson_main']" position="inside">
+                <div id="elearning_tracking_time" t-att="{'slide_id':slide.id}"></div>
+                </xpath>
+       </template>
 
-    <xpath expr="//a[hasclass('o_wslides_js_course_join_link')]" position="attributes">
-       
-       <attribute name="t-if">not channel.is_member and (channel.enroll == 'public' or can_access)</attribute>
-       
-        
-    </xpath>
-    <xpath expr="//div[@t-field='channel.enroll_msg']/.." position="attributes">
-       <attribute name="t-if">not channel.is_member and (channel.enroll == 'invite' and not can_access)</attribute>
-    </xpath>
-
-    </template>
-
+     <template id="slides_template_main_time_pantallacompleta"
+                 inherit_id="website_slides.slide_fullscreen">
+                <xpath expr="//div[@class='o_wslides_fs_container d-flex position-relative overflow-hidden flex-grow-1']" position="inside">
+                <div id="elearning_tracking_time_fullscreen" t-att="{'slide_id':slide.id}"></div>
+                </xpath>
+       </template>
 </odoo>
 
 

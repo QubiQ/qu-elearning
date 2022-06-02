@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Copyright 2022 Jesus Ramoneda <jesus.ramoneda@qubiq.es>
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="slide_slide_partner_view_pivot" model="ir.ui.view">
+        <field name="name">slide.slide.partner.view.pivot</field>
+        <field name="model">slide.slide.partner</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="partner_id" type="row"/>
+                <field name="channel_id" type="col"/>
+            </pivot>
+        </field>
+    </record>
+    <record id="slide_slide_partner_view_graph" model="ir.ui.view">
+        <field name="name">slide.slide.partner.view.graph</field>
+        <field name="model">slide.slide.partner</field>
+        <field name="arch" type="xml">
+            <graph>
+                <field name="partner_id" type="row"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="slide_slide_partner_action" model="ir.actions.act_window">
+        <field name="name">Student Progress</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">slide.slide.partner</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'pivot', 'view_id': ref('slide_slide_partner_view_pivot')}),
+                (0, 0, {'view_mode': 'graph', 'view_id': ref('slide_slide_partner_view_graph')})]"/>
+    </record>
+
+<!-- This Menu Item must have a parent and an action -->
+<menuitem id="slide_slide_partner_menu_act" name="Student Progress" parent="website_slides.website_slides_menu_report" action="slide_slide_partner_action" sequence="10"/>
+</odoo>
