@@ -7,7 +7,8 @@
     'author': 'QubiQ',
     'website': 'https://www.qubiq.es',
     'depends': [
-        "website_slides"
+        "website_slides",
+	"qu_elearning"
     ],
     "data": [
         'views/slide_channel.xml',
