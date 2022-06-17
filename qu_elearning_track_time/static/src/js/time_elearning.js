@@ -10,7 +10,6 @@ $(document).ready(function(){
   if (track_time_fullscreen)
   {
     var slide_id = $('.o_wslides_fs_sidebar_list_item.active').attr('data-id')
-    console.log(slide_id)
     setInterval(function() {
         ajax.jsonRpc('/slides/update_invested_time','call',{'slide_id': slide_id,'time': 6000}).then(function(data){
               slide_id = $(".o_wslides_fs_sidebar_list_item.active").attr('data-id')
@@ -21,8 +20,7 @@ $(document).ready(function(){
   var track_time= document.getElementById("elearning_tracking_time");
   if (track_time)
     {
-      var slide_id = document.location.pathname.split('/').pop().replace(/\D/g, "")
-      console.log(slide_id)
+      var slide_id = document.location.pathname.split('/').pop().split('-').pop()
       setInterval(function() {
         ajax.jsonRpc('/slides/update_invested_time','call',{'slide_id': slide_id,'time': 6000}).then(function(data){
             });
