@@ -40,6 +40,7 @@ class SlideChannel(models.Model):
             channel.is_member = channel.is_member = self.env.user.partner_id.id in result.get(
                 channel.id, [])
 
+
     def _filter_add_members(self, target_partners, **member_values):
         allowed = super()._filter_add_members(target_partners, **member_values)
         on_invite = self.filtered(lambda channel: channel.enroll != 'public')

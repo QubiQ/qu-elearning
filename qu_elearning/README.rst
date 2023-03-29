@@ -2,32 +2,30 @@
    :target: https://www.gnu.org/licenses/agpl
    :alt: License: AGPL-3
 
-=======================
-Elearning Subscriptions
-=======================
+======================================
+Elearning Allow groups and lock access
+======================================
 
-This modules allows to manage access to course by subscriptions
+
 You can unlock/lock access to the currents attendances by click on Course -> Attendance -> lock button
-
-When a subscriptions is to renew it will automatically lock the access to the customer until the subscriptions is progress again
+Allow to add visibility user groups to be able to see the private courses. 
 
 ============
 Requeriments
 ============
 
-* Odoo Enterprise Edition
-* Install website_slides and sale_subscriptions
+* Install website_slides 
 
 Configuration
 =============
 
 To configure this module, you need to:
 
-#. Create a subscription template
-#. Create a product subscription
-#. Publish the product subscription on website
-#. Activate Ecommerce for Elearning
-#. Set the payment enroll method for a course and choice the subscription product
+#. Install the module 
+#. Go to elearning course an set enroll policy som Allowed groups
+#. visibility only members
+
+
 ...
 
 

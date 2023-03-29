@@ -14,8 +14,6 @@ class WebsiteSlidesQu(WebsiteSlides):
 
     @http.route(['/slides/channel/join'], type='json', auth='public', website=True)
     def slide_channel_join(self, channel_id):
-        print("ENTRA")
-        
         success = super().slide_channel_join(channel_id)
         channel = request.env['slide.channel'].browse(channel_id)
         can_access = [e for e in request.env.user.groups_id if
