@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Copyright 2022 Jesus Ramoneda <jesus.ramoneda@qubiq.es>
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- slide.channel inherit form view -->
+    <record id="slide_channel_inherit_view" model="ir.ui.view">
+        <field name="name">slide.channel.inherit.view.form</field>
+        <field name="model">slide.channel</field>
+        <field name="inherit_id" ref="website_slides.view_slide_channel_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_redirect_to_members']" position="before">
+                <button class="oe_stat_button" type="object" name="total_time_invested"
+                    icon="fa-clock-o">
+                    <field name="total_time_invested_count" string="Invested Time" widget="statinfo" />
+                </button>
+            </xpath>
+        </field>
+
+    </record>
+
+    <!-- slide.channel.partner inherit tree view -->
+    <record id="slide_channel_partner_view_tree" model="ir.ui.view">
+        <field name="name">slide.channel.partner.inherit.view.tree</field>
+        <field name="model">slide.channel.partner</field>
+        <field name="inherit_id" ref="website_slides.slide_channel_partner_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="time_invested" widget="float_time" />
+                <button type="object" name="get_slide_time" string="Time Details"></button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

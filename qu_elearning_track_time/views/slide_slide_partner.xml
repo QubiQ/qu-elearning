@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<odoo>
+    <!-- Partner invested time in slide view-->
+    <record id="slide_slide_partner_tree_view" model="ir.ui.view">
+        <field name="name">slide.slide.partner.tree.view</field>
+        <field name="model">slide.slide.partner</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="channel_id" />
+                <field name="slide_id" />
+                <field name="partner_id" />
+                <field name="create_date" />
+                <field name="invested_time" sum="Total Time Invested" widget="float_time" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="slide_slide_partner_view_pivot" model="ir.ui.view">
+        <field name="name">slide.slide.partner.view.pivot</field>
+        <field name="model">slide.slide.partner</field>
+        <field name="inherit_id" ref="qu_elearning.slide_slide_partner_view_pivot" />
+        <field name="arch" type="xml">
+            <xpath expr="//pivot" position="inside">
+                <field name="invested_time" type="measure" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
