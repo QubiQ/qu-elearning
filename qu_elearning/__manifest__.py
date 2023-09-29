@@ -13,7 +13,7 @@
         'views/slide_channel_partner_view.xml',
         'views/slide_channel_view.xml',
         'views/slide_slide_partner.xml',
-        'views/website_slides_templates_course.xml',
+        #'views/website_slides_templates_course.xml',
         'security/ir_rule.xml',
         ],
     'application': True,
